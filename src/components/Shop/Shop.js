@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Product from '../Product/Product';
 import Products from '../Products/Products';
 import './Shop.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRefresh } from '@fortawesome/free-solid-svg-icons';
 const Shop = () => {
     const [products, setProducts] = useState([]);
     let [cart, setCart] = useState([]);
@@ -26,6 +28,9 @@ const Shop = () => {
             console.log(randomNum);
         }
     }
+    const handleReset = () => {
+        setCart([]);
+    }
     return (
         <div className='shop-container'>
             <div className="product-container">
@@ -40,6 +45,9 @@ const Shop = () => {
                         cart.map(product => <Product key={product.id} product={product}></Product>)
                     }
                     <button className='choose-button' onClick={handleChoose}>Choose 1 for me</button>
+                    <button className='reset' onClick={handleReset}>
+                        Reset <FontAwesomeIcon icon={faRefresh}></FontAwesomeIcon>
+                    </button>
                     {
                         randomNum >= 0
                             ? <Product product={cart[randomNum]}></Product>

@@ -11,3 +11,15 @@
     border-radius: 30px;
     padding: 5px;
 }
+.delete-button{
+    border: none;
+    background-color: rgba(253, 67, 67, 0.418);
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+.delete-button:hover{
+    color: rgba(253, 67, 67, 0.418);
+    background-color: rgb(85, 210, 241);
+    cursor: pointer;
+}
