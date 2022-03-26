@@ -20,6 +20,8 @@ const Shop = () => {
     }
     const [randomNum, setRandomNum] = useState(-1);
     const handleChoose = () => {
+        debugger;
+        document.getElementById('select-item').style.display = 'block';
         const cartLength = cart.length;
         if (cartLength > 0) {
             const rand = Math.random();
@@ -30,6 +32,7 @@ const Shop = () => {
     }
     const handleReset = () => {
         setCart([]);
+        document.getElementById('select-item').style.display = 'none';
     }
     return (
         <div className='shop-container'>
@@ -40,7 +43,7 @@ const Shop = () => {
             </div>
             <div className="cart-container">
                 <div className="cart-details">
-                    <h3 className='order-title'>Order Details</h3>
+                    <h3 className='order-title'>Selected items</h3>
                     {
                         cart.map(product => <Product key={product.id} product={product}></Product>)
                     }
@@ -48,11 +51,13 @@ const Shop = () => {
                     <button className='reset' onClick={handleReset}>
                         Reset <FontAwesomeIcon icon={faRefresh}></FontAwesomeIcon>
                     </button>
-                    {
-                        randomNum >= 0
-                            ? <Product product={cart[randomNum]}></Product>
-                            : console.log(randomNum)
-                    }
+                    <div id="select-item">
+                        {
+                            randomNum >= 0
+                                ? <Product product={cart[randomNum]}></Product>
+                                : console.log(randomNum)
+                        }
+                    </div>
                 </div>
             </div>
         </div >
