@@ -52,6 +52,7 @@ const Shop = () => {
                         Reset <FontAwesomeIcon icon={faRefresh}></FontAwesomeIcon>
                     </button>
                     <div id="select-item">
+                        <h3>You should choose: </h3>
                         {
                             randomNum >= 0
                                 ? <Product product={cart[randomNum]}></Product>
