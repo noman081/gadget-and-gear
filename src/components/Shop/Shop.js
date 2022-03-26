@@ -14,8 +14,14 @@ const Shop = () => {
     }, [])
 
     const handleAddToCart = product => {
-        const newCart = [...cart, product];
-        setCart(newCart);
+        debugger;
+        let newCart;
+        const exist = cart.find(cartProduct => cartProduct.id === product.id);
+        console.log(exist);
+        if (!exist) {
+            newCart = [...cart, product];
+            setCart(newCart);
+        }
         // console.log(cart);
     }
     const [randomNum, setRandomNum] = useState(-1);
