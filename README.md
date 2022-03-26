@@ -1,5 +1,5 @@
 # Gadget and gear
 
-## Livesite
- [Gadget and gear](https://gadget-and-gear-noman.netlify.app/).
+## Live-site
+ [https://gadget-and-gear-noman.netlify.app/](https://gadget-and-gear-noman.netlify.app/).
 
