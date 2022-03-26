@@ -3,9 +3,6 @@ import './Product.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 const Product = (props) => {
-    debugger;
-    // const { name, imgUrl } = props?.product;
-    // console.log(name, imgUrl);
     return (
         <div className='order-info'>
             <img src={props?.product?.imgUrl} alt="" />

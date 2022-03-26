@@ -34,3 +34,18 @@
     background-color: orange;
     cursor: pointer;
 }
+@media only screen and (max-width: 688px) {
+    .product{
+        height: 370px;
+        width: 220px;
+        border: 1px solid #95A0A7;
+        border-radius: 8px;
+        position: relative;
+    }
+    .product img{
+        width: 200px;
+        height: 200px;
+        padding: 8px;
+        border-radius: 8px;
+    }
+}
