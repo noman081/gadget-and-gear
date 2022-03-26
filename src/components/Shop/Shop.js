@@ -30,7 +30,7 @@ const Shop = () => {
         document.getElementById('select-item').style.display = 'block';
         const cartLength = cart.length;
         if (cartLength === 0) {
-            // document.getElementById('select-item').style.display = 'none';
+            document.getElementById('select-item').style.display = 'none';
         }
         if (cartLength > 0) {
             const rand = Math.random();
